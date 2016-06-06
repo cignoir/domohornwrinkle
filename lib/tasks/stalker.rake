@@ -1,12 +1,8 @@
 require 'open-uri'
 
 namespace :stalker do
-  task :gaze => :environment do
-    search_url = 'http://refind2ch.org/search?q=%E5%8D%83%E5%B9%B4%E6%88%A6%E4%BA%89%E3%82%A2%E3%82%A4%E3%82%AE%E3%82%B9&pl=2chnet'
-
-    doc = Nokogiri::HTML.parse(open(search_url).read)
-    urls = doc.css('.thread_url').take(2).map{ |node| node.attributes['href'].text }.reverse
-
+  task :gaze, ['search_word'] => :environment do |task, args|
+    urls = Stalker::Thread.find(args[:search_word]).take(2).reverse
     urls.each do |url|
       thread = Stalker::Thread.new(url.gsub(/l50/, ''))
       posts = thread.parse

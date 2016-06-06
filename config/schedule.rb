@@ -23,6 +23,6 @@ set :environment, :development
 
 env :PATH, ENV['PATH']
 
-every 1.minutes do
-  rake "stalker:gaze"
-end
+# every 1.minutes do
+#   rake "stalker:gaze[ホモ]"
+# end

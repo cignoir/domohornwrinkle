@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/cignoir/stalker.git
-  revision: 5536efb3a792c53123fa39230249feb941623463
+  revision: 4020ee40a6c414fc50ca5660f583eb2e8a625101
   specs:
     stalker (0.1.0)
       activesupport
