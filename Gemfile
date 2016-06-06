@@ -48,3 +48,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "haml-rails"
+gem 'stalker', github: 'cignoir/stalker'
+gem 'faraday'
+gem 'nokogiri'
+gem 'whenever', :require => false

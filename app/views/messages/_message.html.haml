@@ -1,0 +1,7 @@
+.card.unread
+  - img_url = (%r{((ttp|ttps)://.+.(png|jpeg|jpg|gif))} =~ message.content) ? "h#{$1}" : nil
+  - if img_url
+    .card-image
+      %img{ src: img_url }
+  .card-content
+    = message.content

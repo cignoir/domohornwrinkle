@@ -13,6 +13,10 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+config/secrets.yml
+log/*.log
+/db/*.sqlite3
+*.rdb
 
 # Used by dotenv library to load environment variables.
 # .env
